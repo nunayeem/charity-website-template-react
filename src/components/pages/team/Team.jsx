@@ -33,8 +33,21 @@ const Team = () => {
       instagram: '',
       youtube: ''
     }
-  }
+  },
+  {
+    id: 3,
+    name: 'Kabita Akter',
+    jobTitle: 'House Maker',
+    profilePicture: '/assets/img/team-2.jpg',
+    socialLinks: {
+      facebook: 'samiya.com',
+      twitter: '',
+      instagram: '',
+      youtube: ''
+    }
+  },
 ];
+
 
   return (
     <Layout>

@@ -1,7 +1,16 @@
-import React from 'react'
+import {useState, useEffect} from 'react'
 import { Link, NavLink } from 'react-router'
 
 const Navbar = () => {
+
+    const [date, setDate] = useState(new Date());
+
+    useEffect(() => {
+        setTimeout(() => {
+            setDate(new Date());
+        }, 1000)
+    }, [date]);
+
   return (
     // <!-- Navbar Start -->
     <div className="container-fluid bg-secondary px-0 wow fadeIn" data-wow-delay="0.1s">
@@ -27,6 +36,11 @@ const Navbar = () => {
                         </div>
                         <Link to="/contact" className="nav-item nav-link">Contact</Link>
                     </div>
+
+                    <div>
+                        <h4 className='text-white display-6'> {date.toLocaleTimeString()} </h4>
+                    </div>
+
                     <div className="d-none d-lg-flex ms-auto">
                         <a className="btn btn-square btn-dark ms-2" href=""><i className="fab fa-twitter"></i></a>
                         <a className="btn btn-square btn-dark ms-2" href=""><i className="fab fa-facebook-f"></i></a>
